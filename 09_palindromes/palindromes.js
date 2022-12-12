@@ -1,7 +1,5 @@
 const palindromes = function(str) {
-  const newStr = str
-    .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "")
-    .replace(/\s/g, "");
+  const newStr = str.toLowerCase().replace(/[^a-z]/g, "")
   const reversedStr = newStr
     .split("")
     .reverse()
